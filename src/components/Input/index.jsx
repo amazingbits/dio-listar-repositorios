@@ -1,7 +1,18 @@
-import { InputStyle } from "./styles";
+import { InputContainer } from "./styles";
 
-const Input = () => {
-  return <InputStyle />;
+const Input = ({ label, name, value, onChange, ...props }) => {
+  return (
+    <InputContainer>
+      <label htmlFor={name}>{label}</label>
+      <input
+        name={name}
+        id={name}
+        value={value}
+        onChange={onChange}
+        {...props}
+      />
+    </InputContainer>
+  );
 };
 
 export default Input;

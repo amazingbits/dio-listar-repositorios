@@ -1,7 +1,7 @@
-import { ButtonStyle } from "./styles";
+import { ButtonComponent } from "./styles";
 
-const Button = () => {
-  return <ButtonStyle>Button</ButtonStyle>;
+const Button = (props) => {
+  return <ButtonComponent {...props}>{props.children}</ButtonComponent>;
 };
 
 export default Button;
